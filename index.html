@@ -1,63 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
     <link rel="stylesheet" href="mystyle.css">
-    <title>Document</title>
 </head>
-
 <body>
-    <nav class="menu-nav">
-        <a href="index.html" class="active">Home</a>
-        <a href="skills.html">Skills</a>
-        <a href="projects.html">projects</a>
-        <a href="publications.html">Publications</a>
-        <a href="contacto.html">Contacto</a>
-    </nav>
-    <div class="main-flex">
-        <header>
-            <div class="my-info">
-                <img src="imagenes/foto.jpg" alt="">
-                <h1>Lupita Haros</h1>
-                <p class="text-primario">Research Software Engineer</p>
-                <p class="text--secondary">Universidad Aut&oacute;noma de Baja California</p>
-            </div>
-        </header>
-        <main>
-            <div class="container">
-                <h2>About me</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea quos necessitatibus voluptatum molestiae eum enim numquam, modi aut delectus minima perferendis! Quam vel ducimus incidunt voluptates libero! Ipsum, aut dolore?</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea quos necessitatibus voluptatum molestiae eum enim numquam, modi aut delectus minima perferendis! Quam vel ducimus incidunt voluptates libero! Ipsum, aut dolore?</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea quos necessitatibus voluptatum molestiae eum enim numquam, modi aut delectus minima perferendis! Quam vel ducimus incidunt voluptates libero! Ipsum, aut dolore?</p>
-            </div>
-            <div class="interests-flex">
-                <div class="container">
-                    <h3>Interests</h3>
-                    <ul>
-                        <li>Neuroscience</li>
-                        <li>Neuroimaging</li>
-                        <li>Anesthesia</li>
-                        <li>Open science</li>
-                        <li>Software</li>
-                    </ul>
-                </div>
-                <div class="container">
-                    <h3>Interests 2</h3>
-                    <ul>
-                        <li>Neuroscience</li>
-                        <li>Neuroimaging</li>
-                        <li>Anesthesia</li>
-                        <li>Open science</li>
-                        <li>Software</li>
-                    </ul>
-                </div>
+    <header>
+        <img src="imagenes/IEPFI.png" alt="Logo" class="logo">
+        <h1 class="header-title">
+            <span class="highlighted">Contratos</span><br>
+            <span class="sub-title">Docentes e Instructores</span>
+        </h1>
+    </header>
+
+    <section class="form-container">
+        <form action="/ruta-de-envio" method="POST">
+            <div class="form-group">
+                <label for="empleado">¿Eres empleado?</label>
+                <input type="checkbox" id="empleado" name="empleado" value="no_empleado">
+                <span>No soy empleado</span>
             </div>
 
-        </main>
-    </div>
+            <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
 
+            <div class="form-group">
+                <label for="apellido_paterno">Apellido Paterno</label>
+                <input type="text" id="apellido_paterno" name="apellido_paterno" required>
+            </div>
+
+            <div class="form-group">
+                <label for="apellido_materno">Apellido Materno</label>
+                <input type="text" id="apellido_materno" name="apellido_materno" required>
+            </div>
+
+            <div class="form-group">
+                <label for="correo">Correo Electrónico</label>
+                <input type="email" id="correo" name="correo" required>
+            </div>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
 </body>
-
 </html>
+
