@@ -19,33 +19,36 @@
         <form action="/ruta-de-envio" method="POST">
             <div class="form-group">
                 <label for="empleado">¿Eres empleado?</label>
-                <input type="checkbox" id="empleado" name="empleado" value="no_empleado">
+                <input type="checkbox" id="empleado" name="empleado" value="no_empleado" id="txtempleado">
                 <span>No soy empleado</span>
             </div>
 
             <div class="form-group">
                 <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" name="nombre" required>
+                <input type="text" id="nombre" name="nombre" required id="txtnombre">
             </div>
 
             <div class="form-group">
-                <label for="apellido_paterno">Apellido Paterno</label>
-                <input type="text" id="apellido_paterno" name="apellido_paterno" required>
+                <label for="apellidtxtmaternoo_paterno">Apellido Paterno</label>
+                <input type="text" id="apellido_paterno" name="apellido_paterno" required id="txtapaterno">
             </div>
 
             <div class="form-group">
                 <label for="apellido_materno">Apellido Materno</label>
-                <input type="text" id="apellido_materno" name="apellido_materno" required>
+                <input type="text" id="apellido_materno" name="apellido_materno" required id="txtmaterno">
             </div>
 
             <div class="form-group">
                 <label for="correo">Correo Electrónico</label>
-                <input type="email" id="correo" name="correo" required>
+                <input type="email" id="correo" name="correo" required id="txtacorreo">
             </div>
 
-            <button type="submit">Enviar</button>
         </form>
+        <button type="submit" onclick="register()">Enviar</button>
     </section>
+    <div id="list"></div>
+<script src="./register.js"></script>
+
 </body>
 </html>
 
