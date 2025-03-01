@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualización de Contrato</title>
+    <link rel="stylesheet" href="mystyle.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .popup {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 100%;
+            max-width: 600px;
+            position: relative;
+        }
+
+        .header {
+            font-weight: bold;
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .button-container {
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 12px 20px;
+            font-size: 16px;
+            background-color: #287fa7;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .close-btn:hover {
+            background-color: darkred;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Ventana emergente -->
+    <div class="popup">
+        <button class="close-btn">X</button>
+        <div class="header">Abriendo documento PDF</div>
+        <p>¿Qué deseas hacer con el archivo generado?</p>
+
+        <!-- Botones de acción -->
+        <div class="button-container">
+            <button>Abrir archivo</button>
+            <button>Guardar archivo</button>
+        </div>
+
+        <!-- Botones de aceptación -->
+        <div class="button-container">
+            <button>Aceptar</button>
+            <button>Cancelar</button>
+        </div>
+    </div>
+</body>
+</html>

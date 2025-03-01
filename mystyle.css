@@ -15,72 +15,62 @@ header {
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     width: 100%;
 }
 
 .logo {
     width: 110px;
     height: auto;
-    margin-bottom: 10px; /* Para dar espacio entre el logo y el título */
+    margin-bottom: 15px;
 }
 
 .header-title {
     font-size: 24px;
     font-weight: bold;
-    color: #333;
 }
 
 .highlighted {
-    font-size: 40px; /* Tamaño más grande para "Contratos" */
+    font-size: 40px;
     font-weight: bold;
 }
 
 .sub-title {
-    font-size: 1.2em; /* Tamaño más pequeño para "Docentes e Instructores" */
-    color: #FFD700; /* Color amarillo dorado */
+    font-size: 1.2em;
+    color: #FFD700;
 }
 
-.login-container {
+.form-container {
     background: white;
-    padding: 20px;
+    padding: 30px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+}
+
+/* Estilo del cuadro de mensaje */
+.message-box {
+    background-color: #e6f7e6;
+    padding: 20px;
+    border-radius: 8px;
     text-align: center;
+    margin-top: 30px;
+    border: 2px solid #28a745;
+    width: 100%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-h2 {
-    margin-bottom: 20px;
-    color: #333;
+.contract-image {
+    width: 50px;
+    height: auto;
+    margin-bottom: 15px;
 }
 
-label {
-    display: block;
-    text-align: left;
-    margin-top: 10px;
+.message {
+    font-size: 24px;
     font-weight: bold;
-}
-
-input {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-button {
-    width: 100%;
-    background: #28a745;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 15px;
-    font-size: 16px;
-}
-
-button:hover {
-    background: #218838;
+    color: #28a745;
 }
