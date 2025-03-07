@@ -1,40 +1,51 @@
 //constructor
-function docente(empleado,nombre,paterno,materno){
+function docente(empleado, nombre, apellido_paterno, apellido_materno, correo){
     this.empleado=empleado;
     this.nombre=nombre;
-    this.paterno=paterno;
-    this.materno=materno;
+    this.apellido_paterno=apellido_paterno;
+    this.apellido_materno=apellido_materno;
+    this.correo=correo;
 
 }
 //get the inputs from HTML
-const inputempleado = document.getElementById("txtempleado");
-const inputnombre = document.getElementById("txtnombre");
-const inputpaterno = document.getElementById("txtapaterno");
-const inputmaterno = document.getElementById("txtmaterno");
+const inputempleado = document.getElementById("txtEmpleado");
+const inputnombre = document.getElementById("txtNombre");
+const inputapellido_paterno = document.getElementById("txtApellido_paterno");
+const inputapellido_materno = document.getElementById("txtApellido_materno");
+const inputcorreo = document.getElementById("txtCorreo");
 
 function register(){
+
     // crear objeto
-    let newdocente=new docente (inputempleado.value, inputnombre.value, inputpaterno.value, inputmaterno.value)
-     //desplegar el obj
-     if( inputName.value == ""){
-        alert("Ingresa el nombre");
-    }else{
-        display(newdocente);
+    let nuevodocente= new docente (inputempleado.value, inputnombre.value, inputapellido_paterno.value, inputapellido_materno.value,inputcorreo.value)
+
+     //validar que el usuario haya ingresado datos a cada input
+     if(inputempleado.value == ""){
+        alert("Ingresa el empleado");
+        console.log("Ingresa el empleado");
+
     }
+    else{ 
+        if(inputnombre.value == ""){
+        alert("Ingresa el nombre");
+    }
+
+    }
+        
+    
+   // mostrar datos del usuario
+   const lista = document.getElementById("list");
+
+   lista.innerHTML = `
+       <p><strong>No empleado:</strong> ${nuevodocente.empleado}</p>
+       <p><strong>Nombre:</strong> ${nuevodocente.nombre}</p>
+       <p><strong>apellido paterno:</strong> ${nuevodocente.apellido_paterno}</p>
+       <p><strong>apellido materno:</strong> ${nuevodocente.apellido_materno}</p>
+       <p><strong>correo:</strong> ${nuevodocente.correo}</p>
+`;
+
 }
 
-function display(docente){
-    const list = document.getElementById("list");
-    p=`
-    <div> 
-        <p>${docente.nombre} - ${docente.paterno}</p>
-    </div>
-    `;
-    list.innerHTML+=p;// inserta en HTML
-}
 
-//objetos
 
-let docente1 = new docente("1","Karla","perez","haros");
 
-display(docente1);
